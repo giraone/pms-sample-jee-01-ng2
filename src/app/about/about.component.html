@@ -1,0 +1,28 @@
+<h2>{{ 'about.title' | translate }}</h2>
+
+<p class="lead">Sample PMS application</p>
+
+<p>With front-end based on <i>Angular 2.0</i> and <i>Bootstrap 3</i> and back-end based on <i>Java Enterprise Edition 6 (JEE 6)</i>.
+
+<p>See documentation on these two GitHub projects</p>
+<ul>
+  <li><a href="https://github.com/giraone/pms-sample-jee-01-ng2" target="_new">Front-end (<i>giraone/pms-sample-jee-01-ng2</i>)</a></li>
+  <li><a href="https://github.com/giraone/pms-sample-jee-01" target="_new">Back-end (<i>giraone/pms-sample-jee-01</i>)</a></li>
+</ul>
+<p>for more information.</p>
+
+<small>&copy; 2015, giraone.com</small>
+
+<hr />
+
+<div>Language = {{language}} ({{ 'language' | translate }})</div>
+<div>costCenterDetails.title = {{ 'costCenterDetails.title' | translate }}</div>
+
+<button (click)="loadTranslation('en')">loadTranslation en</button>
+<button (click)="loadTranslation('de')">loadTranslation de</button>
+<button (click)="loadTranslation('fr')">loadTranslation fr</button>
+
+<button (click)="testTranslation('language')">Translate language</button>
+<button (click)="testTranslation('common.toggleNavigation')">Translate common.toggleNavigation</button>
+
+

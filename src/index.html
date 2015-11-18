@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PMS</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+  <link rel="icon" href="assets/images/favicon.ico"/>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="vendor/admin-lte/css/AdminLTE.css">
+
+  <base href="/"/>
+</head>
+
+<body>
+  <main-app>Wait! System is loading ...</main-app>
+</body>
+
+<script src="vendor/jquery/jquery-2.1.4.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.js"></script>
+<script src="vendor/admin-lte/js/app.js"></script>
+
+<!-- ES6-related imports -->
+<script src="vendor/es6-shim/es6-shim.min.js"></script>
+<script src="vendor/systemjs/dist/system.js"></script>
+<script src="vendor/angular2/bundles/angular2.min.js"></script>
+<script src="vendor/angular2/bundles/http.min.js"></script>
+<script src="vendor/angular2/bundles/router.dev.min.js"></script>
+<script src="vendor/@reactivex/rxjs/dist/global/Rx.min.js"></script>
+
+<script>
+  //configure system loader
+  System.config({
+    defaultJSExtensions: true,
+    packages: {
+      "/angular2": {"defaultExtension": false},
+      "/@reactivex": {"defaultExtension": false}
+    },
+    map: {
+      'ng2-translate': 'vendor/ng2-translate'
+    }
+  });
+</script>
+
+<script>
+  System.import('app/bootstrap').catch(console.log.bind(console));
+</script>
+
+</html>

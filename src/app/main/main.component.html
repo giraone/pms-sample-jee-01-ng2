@@ -1,0 +1,109 @@
+<div class="wrapper">
+  <header class="main-header">
+    <!-- Logo -->
+    <a ui-sref="dashboard" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini" translate="mainApp.shortTitle">PMS</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg" translate="mainApp.title">PMS</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only" translate="common.toggleNavigation"></span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li [style.display]="showBackButton ? 'block' : 'none'">
+            <a href (click)="goBack()"><i class="fa fa-chevron-left"></i></a>
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu hide">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">0</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header" translate="common.noNotifications"></li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="#"><i class="fa fa-users text-aqua"></i>Info</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#" translate="common.showAll"></a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li ui-sref-active="active">
+          <a ui-sref="dashboard" close-sidebar-on-mobile><i class="fa fa-dashboard"></i> <span
+            translate="dashboard.title">Dashboard</span></a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="costCenters" close-sidebar-on-mobile><i class="fa fa-list"></i> <span
+            translate="costCenterList.title">Kostenstellen</span></a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="employees" close-sidebar-on-mobile><i class="fa fa-list"></i> <span
+            translate="employeeList.title">Mitarbeiter</span></a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="about" close-sidebar-on-mobile><i class="fa fa-list"></i> <span
+            translate="about.title">Über ..</span></a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="testPage" close-sidebar-on-mobile><i class="fa fa-flash"></i>
+            <span>Test-Page (Dev Mode Only)</span></a>
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content" ui-view="main">
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <span translate="footer.text">Foter: Kein Text</span>&nbsp;
+  </footer>
+
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading" translate="sidebar.language"></h3>
+        <button class="btn btn-default" (click)="switchTo('de-DE')" type="button"
+                translate="sidebar.languages.deDE"></button>
+        <button class="btn btn-default" (click)="switchTo('en-US')" type="button"
+                translate="sidebar.languages.enUS"></button>
+        <!-- /.control-sidebar-menu -->
+      </div>
+    </div>
+  </aside>
+
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>

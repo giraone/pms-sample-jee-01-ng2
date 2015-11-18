@@ -1,0 +1,129 @@
+{
+  "language": "English",
+  "mainApp": {
+    "shortTitle": "PMS",
+    "title": "PMS App"
+  },
+  "common": {
+    "toggleNavigation": "Toggle navigation",
+    "showAll": "Show all",
+    "noNotifications": "No notification!",
+    "back": "Back",
+    "requestError": "Request failed! Please try again later."
+  },
+  "globals": {
+    "dateFormatMedium": "{{date|date:'MM/dd/yyyy'}}",
+    "dateInputFormatMedium": "MM/DD/YYYY'}}",
+    "dateFormatMediumInValid": "does not match correct format \"dd.mm.yyyy\" (e.g. 29.03.1966)"
+  },
+  "footer": {
+    "text": "Footer - no text yet."
+  },
+  "sidebar": {
+    "language": "Language",
+    "languages": {
+      "enUS": "English",
+      "deDE": "Deutsch"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "costCenter": "Overview about cost centers",
+    "employees": "Overview about employees",
+    "more": "More info"
+  },
+  "about": {
+    "title": "About..."
+  },
+  "formCommon": {
+    "reset": "Reset",
+    "cancel": "Cancel",
+    "save": "Save",
+    "required": "Field is required!",
+    "minimumLengthIs": "Minimum length is {{v0}}!",
+    "maximumLengthIs": "Maximum length is {{v0}}!"
+  },
+  "costCenterList": {
+    "title": "Cost Center List",
+    "error": "Unable to retrieve list of cost centers.",
+    "noEntities": "No cost centers were found.",
+    "add": "Add new cost centers",
+    "oid": "ID",
+    "identification": "Identification",
+    "description": "Description"
+  },
+  "costCenterDetails": {
+    "title": "Cost center",
+    "successCreate": "New cost center has been created!",
+    "successUpdate": "Cost center has been updated!",
+    "identification": "Unique identification",
+    "identification_placeholder": "Enter a unique identification",
+    "description": "Description",
+    "description_placeholder": "Enter a name"
+  },
+  "employeeList": {
+    "title": "Employee List",
+    "error": "Unable to retrieve list of employees.",
+    "noEntities": "No employees were found.",
+    "add": "Add new employee",
+    "oid": "ID",
+    "personnelNumber": "Personnel Number",
+    "personnelNumberShort": "P#",
+    "name": "Name",
+    "dateOfBirth": "Date of Birth",
+    "costCenter": "Cost center"
+  },
+  "employeeDetails": {
+    "title": "Employee",
+    "successCreate": "New employee data has been created!",
+    "successUpdate": "Employee data has been updated!",
+    "personnelNumber": {
+      "label": "Personnel Number",
+      "placeholder": "Personnel Number"
+    },
+    "lastName": {
+      "label": "Last Name",
+      "placeholder": "Last Name"
+    },
+    "firstName": {
+      "label": "First Name",
+      "placeholder": "First Name, also multiple"
+    },
+    "dateOfBirth": {
+      "label": "Date of Birth",
+      "placeholder": "Enter DoB in format mm/dd/yyyy (e.g. 03/29/1966)"
+    },
+    "gender": {
+      "label": "Gender",
+      "placeholder": "Select gender",
+      "value_U": "unknown",
+      "value_M": "male",
+      "value_F": "female",
+      "value_I": "indifferent"
+    },
+    "dateOfEntry": {
+      "label": "Date of Entry",
+      "placeholder": "Enter entry date in format mm/dd/yyyy (e.g. 09/30/2015)"
+    },
+    "nationalityCode": {
+      "label": "Nationality",
+      "placeholder": "Select nationality",
+      "value_DEU": "Germany",
+      "value_AUT": "Austria",
+      "value_CHE": "Switzerland",
+      "value_ITA": "Italy",
+      "value_USA": "USA"
+    },
+    "costCenter": {
+      "label": "Cost center",
+      "placeholder": "Select an existing cost center"
+    },
+    "costCenterDetails.title": "Cost center",
+    "costCenterDetails.successCreate": "New cost center has been created!",
+    "costCenterDetails.successUpdate": "Cost center has been updated!",
+    "costCenterDetails.identification": "Unique identification",
+    "costCenterDetails.identification_placeholder": "Enter a unique identification",
+    "costCenterDetails.description": "Description",
+    "costCenterDetails.description_placeholder": "Enter a name"
+  }
+}

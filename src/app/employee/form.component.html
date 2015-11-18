@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="box box-primary">
+      <div class="box-header with-border">
+        <h3 class="box-title">{{ 'employeeDetails.title' | translate }} <span>{{ entity }}</span></h3>
+      </div>
+      <!-- /.box-header -->
+      <!-- form start -->
+      <form role="form" [ng-form-model]="formGroup" (submit)="onSubmit(formGroup.value)">
+        <div class="box-body">
+          <div class="form-group has-feedback"
+               [class.has-error]="field1.touched && !field1.valid"
+               [class.has-success]="field1.touched && field1.valid">
+            <label for="personnelNumber" class="control-label">{{ 'employeeDetails.personnelNumber' | translate }}</label>
+            <input id="personnelNumber" [ng-form-control]="formGroup.controls['personnelNumber']" #field1="form"
+                   class="form-control" type="text" required
+                   placeholder="{{ 'employeeDetails.personnelNumber.placeholder' | translate }}" />
+            <span class="glyphicon form-control-feedback"
+                  [class.glyphicon-remove]="field1.touched && !field1.valid"
+                  [class.glyphicon-ok]="field1.touched && field1.valid"></span>
+          </div>
+          <div class="form-group has-feedback"
+               [class.has-error]="field2.touched && !field2.valid"
+               [class.has-success]="field2.touched && field2.valid">
+            <label for="lastName" class="control-label">{{ 'employeeDetails.lastName' | translate }}</label>
+            <input id="lastName" [ng-form-control]="formGroup.controls['lastName']" #field2="form"
+                   class="form-control" type="text" required
+                   placeholder="{{ 'employeeDetails.lastName.placeholder' | translate }}" />
+            <span class="glyphicon form-control-feedback"
+                  [class.glyphicon-remove]="field2.touched && !field2.valid"
+                  [class.glyphicon-ok]="field2.touched && field2.valid"></span>
+          </div>
+          <div class="form-group has-feedback"
+               [class.has-error]="field3.touched && !field3.valid"
+               [class.has-success]="field3.touched && field3.valid">
+            <label for="firstName" class="control-label">{{ 'employeeDetails.firstName' | translate }}</label>
+            <input id="firstName" [ng-form-control]="formGroup.controls['firstName']" #field3="form"
+                   class="form-control" type="text" required
+                   placeholder="{{ 'employeeDetails.firstName.placeholder' | translate }}" />
+            <span class="glyphicon form-control-feedback"
+                  [class.glyphicon-remove]="field3.touched && !field3.valid"
+                  [class.glyphicon-ok]="field3.touched && field3.valid"></span>
+          </div>
+          <div class="form-group has-feedback"
+               [class.has-error]="gender.touched && !gender.valid"
+               [class.has-success]="gender.touched && gender.valid">
+            <label for="gender" class="control-label">{{ 'employeeDetails.gender' | translate }}</label>
+            <input id="gender" [ng-form-control]="formGroup.controls['gender']" #gender="form"
+                   class="form-control" type="text" required
+                   placeholder="{{ 'employeeDetails.gender.placeholder' | translate }}" />
+            <span class="glyphicon form-control-feedback"
+                  [class.glyphicon-remove]="gender.touched && !gender.valid"
+                  [class.glyphicon-ok]="gender.touched && gender.valid"></span>
+          </div>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+          <button type="reset" class="btn" (click)="cancel()">{{ 'formCommon.cancel' | translate }}</button>
+          <button type="submit" class="btn btn-primary pull-right">{{ 'formCommon.save' | translate }}</button>
+        </div>
+      </form>
+      <!-- form end -->
+    </div>
+  </div>
+</div>
